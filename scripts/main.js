@@ -18,7 +18,10 @@
 
 function RockPaperScissors() {
   //function definitions
-  function playGame(rounds) {}
+  function playGame(rounds) {
+    let computerScore = 0;
+    let humanScore = 0;
+  }
   //main function
   let rounds;
   do {
