@@ -30,7 +30,7 @@ function RockPaperScissors() {
             return true;
           case "paper":
             return true;
-          case "scissor":
+          case "scissors":
             return true;
           default:
             return false;
@@ -38,21 +38,19 @@ function RockPaperScissors() {
       }
       let choice;
       do {
-        choice = prompt("Enter your choice (rock, paper, scissor): ");
+        choice = prompt("Enter your choice (rock, paper, scissors): ");
       } while (!isValidChoice(choice));
       return choice;
     }
 
     function getComputerChoice() {
-      const choices = ["rock", "paper", "scissor"];
+      const choices = ["rock", "paper", "scissors"];
       const choice = choices[Math.floor(Math.random() * choices.length)];
       return choice;
     }
 
     for (let i = 0; i < rounds; i++) {
-      function playRound(computerChoice, humanChoice) {
-          while(computerChoice===humanChoice)
-      }
+      function playRound(computerChoice, humanChoice) {}
     }
   }
 
