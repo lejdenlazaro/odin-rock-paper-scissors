@@ -50,7 +50,15 @@ function RockPaperScissors() {
     }
 
     for (let i = 0; i < rounds; i++) {
-      function playRound(computerChoice, humanChoice) {}
+      function playRound(computerChoice, humanChoice) {
+        if (computerChoice === "paper" && humanChoice === "rock") return 1;
+        else if (computerChoice === "rock" && humanChoice == "scissors")
+          return 1;
+        else if (computerChoice === "scissors" && humanChoice === "paper")
+          return 1;
+        else if (computerChoice === humanChoice) return 0;
+        else return -1;
+      }
     }
   }
 
