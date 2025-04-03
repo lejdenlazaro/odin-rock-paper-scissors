@@ -22,6 +22,19 @@ function RockPaperScissors() {
     let humanScore = 0;
 
     function getHumanChoice() {
+      function isValidChoice(choice) {
+        choice = choice.toLowerCase();
+        switch (choice) {
+          case "rock":
+            return true;
+          case "paper":
+            return true;
+          case "scissor":
+            return true;
+          default:
+            return false;
+        }
+      }
       let choice;
       do {
         choice = prompt("Enter your choice (rock, paper, scissor): ");
