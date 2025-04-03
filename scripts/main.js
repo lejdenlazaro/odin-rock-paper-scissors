@@ -18,4 +18,6 @@
 
 function RockPaperScissors() {
   const rounds = prompt();
+  let computerScore = 0;
+  let humanScore = 0;
 }
