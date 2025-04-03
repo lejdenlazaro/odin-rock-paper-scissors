@@ -39,6 +39,7 @@ function RockPaperScissors() {
       do {
         choice = prompt("Enter your choice (rock, paper, scissor): ");
       } while (!isValidChoice(choice));
+      return choice;
     }
     function getComputerChoice() {}
 
