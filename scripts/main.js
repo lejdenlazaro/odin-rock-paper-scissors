@@ -20,5 +20,6 @@ function RockPaperScissors() {
   const rounds = parseInt(prompt("Enter a positive number: "));
   let computerScore = 0;
   let humanScore = 0;
-  playGame(rounds){}
+
+  function playGame(rounds) {}
 }
