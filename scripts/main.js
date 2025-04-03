@@ -21,10 +21,15 @@ function RockPaperScissors() {
   function playGame(rounds) {
     let computerScore = 0;
     let humanScore = 0;
+
+    function getHumanChoice() {}
+    function getComputerChoice() {}
+
     for (let i = 0; i < rounds; i++) {
       function playRound() {}
     }
   }
+
   //main function
   let rounds;
   do {
