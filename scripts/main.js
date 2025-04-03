@@ -43,7 +43,11 @@ function RockPaperScissors() {
       return choice;
     }
 
-    function getComputerChoice() {}
+    function getComputerChoice() {
+      const choices = ["rock", "paper", "scissor"];
+      const choice = choices[Math.floor(Math.random() * choices.length)];
+      return choice;
+    }
 
     for (let i = 0; i < rounds; i++) {
       function playRound() {}
