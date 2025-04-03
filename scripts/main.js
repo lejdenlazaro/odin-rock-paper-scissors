@@ -38,7 +38,7 @@ function RockPaperScissors() {
       let choice;
       do {
         choice = prompt("Enter your choice (rock, paper, scissor): ");
-      } while (isValidChoice(choice));
+      } while (!isValidChoice(choice));
     }
     function getComputerChoice() {}
 
