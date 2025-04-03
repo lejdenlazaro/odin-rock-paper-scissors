@@ -20,7 +20,6 @@ function RockPaperScissors() {
   function playGame(rounds) {
     function getHumanChoice() {
       function isValidChoice(choice) {
-        choice = choice.toLowerCase();
         choice = choice.trim();
         switch (choice) {
           case "rock":
