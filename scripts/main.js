@@ -17,12 +17,16 @@
 // }
 
 function RockPaperScissors() {
-  //function definitions
   function playGame(rounds) {
     let computerScore = 0;
     let humanScore = 0;
 
-    function getHumanChoice() {}
+    function getHumanChoice() {
+      let choice;
+      do {
+        choice = prompt("Enter your choice (rock, paper, scissor): ");
+      } while (isValidChoice(choice));
+    }
     function getComputerChoice() {}
 
     for (let i = 0; i < rounds; i++) {
