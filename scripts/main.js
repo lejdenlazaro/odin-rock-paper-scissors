@@ -17,6 +17,8 @@
 // }
 
 function RockPaperScissors() {
+  //function definitions
+  function playGame(rounds) {}
   //main function
   let rounds;
   do {
