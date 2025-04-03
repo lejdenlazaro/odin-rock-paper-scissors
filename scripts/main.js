@@ -74,6 +74,9 @@ function RockPaperScissors() {
           break;
         }
       }
+      console.log(`computer: ${computerChoice} score: ${computerScore}`);
+      console.log(`human: ${humanChoice} score: ${humanScore}`);
+      console.log("///////////////////////////////////////////////");
     }
     if (computerScore > humanScore) return 1;
     else if (computerScore < humanScore) return -1;
