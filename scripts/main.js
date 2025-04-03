@@ -56,9 +56,12 @@ function RockPaperScissors() {
         else if (computerChoice === humanChoice) return 0;
         else return -1;
       }
+
       let computerScore = 0;
       let humanScore = 0;
-      const roundResult = playRound(getComputerChoice, getHumanChoice);
+      const computerChoice = getComputerChoice();
+      const humanChoice = getHumanChoice();
+      const roundResult = playRound(computerChoice, humanChoice);
       switch (roundResult) {
         case 1: {
           computerScore++;
