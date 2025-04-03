@@ -36,6 +36,8 @@ function RockPaperScissors() {
       let choice;
       do {
         choice = prompt("Enter your choice (rock, paper, scissors): ");
+        if (choice === null)
+          console.log("You cancelled it bro. WTF is wrong with you.");
       } while (!isValidChoice(choice));
       return choice;
     }
