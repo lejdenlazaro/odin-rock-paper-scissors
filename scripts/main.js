@@ -15,3 +15,5 @@
 //     playRound(humanChoice, computerChoice);
 //     playGame(rounds);
 // }
+
+function RockPaperScissors() {}
