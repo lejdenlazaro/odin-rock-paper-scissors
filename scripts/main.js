@@ -46,6 +46,8 @@ function RockPaperScissors() {
       return choice;
     }
 
+    let computerScore = 0;
+    let humanScore = 0;
     for (let i = 0; i < rounds; i++) {
       function playRound(computerChoice, humanChoice) {
         if (computerChoice === "paper" && humanChoice === "rock") return 1;
@@ -56,9 +58,6 @@ function RockPaperScissors() {
         else if (computerChoice === humanChoice) return 0;
         else return -1;
       }
-
-      let computerScore = 0;
-      let humanScore = 0;
       const computerChoice = getComputerChoice();
       const humanChoice = getHumanChoice();
       const roundResult = playRound(computerChoice, humanChoice);
