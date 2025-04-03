@@ -16,4 +16,6 @@
 //     playGame(rounds);
 // }
 
-function RockPaperScissors() {}
+function RockPaperScissors() {
+  const rounds = prompt();
+}
