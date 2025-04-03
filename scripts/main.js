@@ -50,7 +50,9 @@ function RockPaperScissors() {
     }
 
     for (let i = 0; i < rounds; i++) {
-      function playRound(computerChoice, humanChoice) {}
+      function playRound(computerChoice, humanChoice) {
+          while(computerChoice===humanChoice)
+      }
     }
   }
 
