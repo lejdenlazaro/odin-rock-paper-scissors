@@ -18,9 +18,6 @@
 
 function RockPaperScissors() {
   function playGame(rounds) {
-    let computerScore = 0;
-    let humanScore = 0;
-
     function getHumanChoice() {
       function isValidChoice(choice) {
         choice = choice.toLowerCase();
@@ -59,7 +56,26 @@ function RockPaperScissors() {
         else if (computerChoice === humanChoice) return 0;
         else return -1;
       }
+      let computerScore = 0;
+      let humanScore = 0;
+      const roundResult = playRound(getComputerChoice, getHumanChoice);
+      switch (roundResult) {
+        case 1: {
+          computerScore++;
+          break;
+        }
+        case -1: {
+          humanScore++;
+          break;
+        }
+        default: {
+          break;
+        }
+      }
     }
+    if (computerScore > humanScore) return 1;
+    else if (computerScore < humanScore) return -1;
+    else return 0;
   }
 
   //main function
