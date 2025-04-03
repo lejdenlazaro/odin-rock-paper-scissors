@@ -24,6 +24,7 @@ function RockPaperScissors() {
     function getHumanChoice() {
       function isValidChoice(choice) {
         choice = choice.toLowerCase();
+        choice = choice.trim();
         switch (choice) {
           case "rock":
             return true;
@@ -41,6 +42,7 @@ function RockPaperScissors() {
       } while (!isValidChoice(choice));
       return choice;
     }
+
     function getComputerChoice() {}
 
     for (let i = 0; i < rounds; i++) {
