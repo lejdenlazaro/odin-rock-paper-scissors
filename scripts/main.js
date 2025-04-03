@@ -89,6 +89,8 @@ function RockPaperScissors() {
   let rounds;
   do {
     rounds = parseInt(prompt("Enter how many rounds: "));
+    if (rounds === null)
+      console.log("You cancelled it bro. WTF is wrong with you.");
   } while (isNaN(rounds) || rounds < 0);
 
   const gameResult = playGame(rounds);
