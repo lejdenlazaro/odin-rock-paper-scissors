@@ -86,7 +86,7 @@ function RockPaperScissors() {
   //main function
   let rounds;
   do {
-    rounds = parseInt(prompt("Enter a positive number: "));
+    rounds = parseInt(prompt("Enter how many rounds: "));
   } while (isNaN(rounds) || rounds < 0);
 
   const gameResult = playGame(rounds);
