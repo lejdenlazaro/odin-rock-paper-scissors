@@ -16,4 +16,12 @@
 //     playGame(rounds);
 // }
 
-function RockPaperScissors() {}
+function RockPaperScissors() {
+  //main function
+  let rounds;
+  do {
+    rounds = parseInt(prompt("Enter a positive number: "));
+  } while (isNaN(rounds) || rounds < 0);
+
+  return playGame(rounds) ? console.log("You win!") : console.log("You lost!");
+}
