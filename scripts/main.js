@@ -17,7 +17,7 @@
 // }
 
 function RockPaperScissors() {
-  const rounds = prompt();
+  const rounds = parseInt(prompt());
   let computerScore = 0;
   let humanScore = 0;
 }
