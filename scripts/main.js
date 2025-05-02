@@ -21,16 +21,8 @@ function RockPaperScissors() {
     function getHumanChoice() {
       function isValidChoice(choice) {
         choice = choice.trim();
-        switch (choice) {
-          case "rock":
-            return true;
-          case "paper":
-            return true;
-          case "scissors":
-            return true;
-          default:
-            return false;
-        }
+        const choices = { rock: true, paper: true, scissors: true };
+        return choices[choice] ?? false;
       }
       let choice;
       do {
