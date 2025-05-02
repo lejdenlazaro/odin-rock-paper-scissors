@@ -53,27 +53,17 @@ function RockPaperScissors() {
     for (let i = 0; i < rounds; i++) {
       const computerChoice = getComputerChoice();
       const humanChoice = getHumanChoice();
-      const roundResult = playRound(computerChoice, humanChoice);
-      switch (roundResult) {
-        case 1: {
-          computerScore++;
-          break;
-        }
-        case -1: {
-          humanScore++;
-          break;
-        }
-        default: {
-          break;
-        }
-      }
+
+      const result = { computer: computerScore++, human: humanScore++ };
+      result[playRound(getComputerChoice(), getHumanChoice())];
+
       console.log(`computer: ${computerChoice} score: ${computerScore}`);
       console.log(`human: ${humanChoice} score: ${humanScore}`);
       console.log("///////////////////////////////////////////////");
     }
-    if (computerScore > humanScore) return 1;
-    else if (computerScore < humanScore) return -1;
-    else return 0;
+    if (computerScore > humanScore) return "You lost!";
+    else if (computerScore < humanScore) return "You win!";
+    else return "It's a tie!";
   }
 
   //main function
