@@ -68,9 +68,9 @@ function RockPaperScissors() {
   }
 
   //main function
-  let rounds;
+  let rounds = 0;
   do {
-    rounds = parseInt(prompt("Enter a positive number: ", 0));
+    rounds = parseInt(prompt("Enter a positive number: "));
   } while (isNaN(rounds) || rounds < 0);
   if (rounds === 0) {
     console.log("Game exited.");
