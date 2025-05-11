@@ -22,7 +22,7 @@ function RockPaperScissors() {
     function playRound(computerChoice, humanChoice) {
       if (computerChoice === "paper" && humanChoice === "rock")
         return "computer";
-      else if (computerChoice === "rock" && humanChoice == "scissors")
+      else if (computerChoice === "rock" && humanChoice === "scissors")
         return "computer";
       else if (computerChoice === "scissors" && humanChoice === "paper")
         return "computer";
