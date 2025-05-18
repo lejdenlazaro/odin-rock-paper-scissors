@@ -20,3 +20,20 @@ const humanScoreDisplay = document.querySelector(".human-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 const humanChoices = document.querySelector(".choices");
 const newGame = document.querySelector(".new-game");
+
+let computerScore = 0;
+let humanScore = 0;
+
+humanChoices.addEventListener("click", (e) => {
+  const humanChoice = e.target.className.toString();
+  const computerChoice = getComputerChoice();
+
+  const roundResult = playRound(computerChoice, humanChoice);
+  if (roundResult === "computer") computerScore++;
+  else if (roundResult === "human") humanScore++;
+
+  computerChoiceDisplay.textContent = computerChoice;
+  humanChoiceDisplay.textContent = humanChoice;
+  computerScoreDisplay.textContent = computerScore.toString();
+  humanScoreDisplay.textContent = humanScore.toString();
+});
