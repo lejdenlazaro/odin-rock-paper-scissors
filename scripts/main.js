@@ -60,3 +60,11 @@ function RockPaperScissors() {
   }
   console.log(playGame(rounds));
 }
+
+//ui integration
+function getHumanChoice() {
+  const choices = document.getElementById("choices");
+  choices.addEventListener("click", (e) => {
+    return e.target.className;
+  });
+}
