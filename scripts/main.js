@@ -63,8 +63,8 @@ function RockPaperScissors() {
 
 //ui integration
 function getHumanChoice() {
-  const choices = document.getElementById("choices");
+  const choices = document.querySelector(".choices");
   choices.addEventListener("click", (e) => {
-    return e.target.className;
+    return e.target.className.toString();
   });
 }
