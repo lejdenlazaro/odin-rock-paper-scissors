@@ -37,3 +37,13 @@ humanChoices.addEventListener("click", (e) => {
   computerScoreDisplay.textContent = computerScore.toString();
   humanScoreDisplay.textContent = humanScore.toString();
 });
+
+newGame.addEventListener("click", () => {
+  computerScore = 0;
+  humanScore = 0;
+
+  computerChoiceDisplay.textContent = "?";
+  humanChoiceDisplay.textContent = "?";
+  computerScoreDisplay.textContent = computerScore.toString();
+  humanScoreDisplay.textContent = humanScore.toString();
+});
