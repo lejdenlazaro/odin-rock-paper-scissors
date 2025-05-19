@@ -22,6 +22,12 @@ const roundsDisplay = document.querySelector(".rounds p span");
 const humanChoices = document.querySelector(".choices");
 const newGame = document.querySelector(".new-game");
 
+const gameNode = document.querySelector(".game");
+const scoreBoardNode = document.querySelector(".scoreboard");
+const resultDisplay = document.createElement("h2");
+resultDisplay.style.color = "red";
+gameNode.insertBefore(resultDisplay, scoreBoardNode);
+
 let computerScore = 0;
 let humanScore = 0;
 let rounds = 5;
@@ -43,6 +49,10 @@ humanChoices.addEventListener("click", (e) => {
 
     roundsDisplay.textContent = `${rounds}`;
     rounds -= 1;
+  } else {
+    if (humanScore > computerScore) resultDisplay.textContent = "You won";
+    else if (humanScore < computerScore) resultDisplay.textContent = "You lost";
+    else resultDisplay.textContent = "It's a draw";
   }
   roundsDisplay.textContent = `${rounds}`;
 });
@@ -52,6 +62,7 @@ newGame.addEventListener("click", () => {
   humanScore = 0;
   rounds = 5;
 
+  resultDisplay.textContent = "";
   roundsDisplay.textContent = rounds.toString();
   computerChoiceDisplay.textContent = "?";
   humanChoiceDisplay.textContent = "?";
