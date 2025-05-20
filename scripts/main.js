@@ -52,7 +52,8 @@ humanChoices.addEventListener("click", (e) => {
 
     roundsDisplay.textContent = `${rounds}`;
     rounds -= 1;
-  } else {
+  }
+  if (rounds === 0) {
     if (humanScore > computerScore) resultDisplay.textContent = "You won";
     else if (humanScore < computerScore) resultDisplay.textContent = "You lost";
     else resultDisplay.textContent = "It's a draw";
