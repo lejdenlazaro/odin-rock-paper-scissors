@@ -19,7 +19,7 @@ const computerChoiceDisplay = document.querySelector(".computer-choice");
 const humanScoreDisplay = document.querySelector(".human-score");
 const computerScoreDisplay = document.querySelector(".computer-score");
 const roundsDisplay = document.querySelector(".rounds p span");
-const humanChoices = document.querySelector(".choices");
+const choicesNode = document.querySelector(".choices");
 const newGame = document.querySelector(".new-game");
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
@@ -37,7 +37,7 @@ let rounds = 5;
 
 roundsDisplay.textContent = rounds.toString();
 
-humanChoices.addEventListener("click", (e) => {
+choicesNode.addEventListener("click", (e) => {
   const humanChoice = e.target.className.toString();
   const computerChoice = getComputerChoice();
   if (rounds) {
@@ -51,7 +51,7 @@ humanChoices.addEventListener("click", (e) => {
     humanScoreDisplay.textContent = humanScore.toString();
 
     roundsDisplay.textContent = `${rounds}`;
-    rounds -= 1;
+    rounds--;
   }
   if (rounds === 0) {
     if (humanScore > computerScore) resultDisplay.textContent = "You won";
