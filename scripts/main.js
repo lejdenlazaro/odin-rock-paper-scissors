@@ -21,6 +21,9 @@ const computerScoreDisplay = document.querySelector(".computer-score");
 const roundsDisplay = document.querySelector(".rounds p span");
 const humanChoices = document.querySelector(".choices");
 const newGame = document.querySelector(".new-game");
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
 
 const gameNode = document.querySelector(".game");
 const scoreBoardNode = document.querySelector(".scoreboard");
@@ -54,10 +57,6 @@ humanChoices.addEventListener("click", (e) => {
     else if (humanScore < computerScore) resultDisplay.textContent = "You lost";
     else resultDisplay.textContent = "It's a draw";
 
-    const rock = document.querySelector(".rock");
-    const paper = document.querySelector(".paper");
-    const scissors = document.querySelector(".scissors");
-
     rock.setAttribute("disabled", true);
     paper.setAttribute("disabled", true);
     scissors.setAttribute("disabled", true);
@@ -72,6 +71,9 @@ newGame.addEventListener("click", () => {
 
   resultDisplay.textContent = "";
   roundsDisplay.textContent = rounds.toString();
+  rock.removeAttribute("disabled");
+  paper.removeAttribute("disabled");
+  scissors.removeAttribute("disabled");
   computerChoiceDisplay.textContent = "?";
   humanChoiceDisplay.textContent = "?";
   computerScoreDisplay.textContent = computerScore.toString();
