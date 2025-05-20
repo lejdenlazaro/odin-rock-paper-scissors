@@ -53,6 +53,14 @@ humanChoices.addEventListener("click", (e) => {
     if (humanScore > computerScore) resultDisplay.textContent = "You won";
     else if (humanScore < computerScore) resultDisplay.textContent = "You lost";
     else resultDisplay.textContent = "It's a draw";
+
+    const rock = document.querySelector(".rock");
+    const paper = document.querySelector(".paper");
+    const scissors = document.querySelector(".scissors");
+
+    rock.setAttribute("disabled", true);
+    paper.setAttribute("disabled", true);
+    scissors.setAttribute("disabled", true);
   }
   roundsDisplay.textContent = `${rounds}`;
 });
